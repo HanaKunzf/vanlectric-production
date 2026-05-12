@@ -1,0 +1,29 @@
+# Vanlectric SPA fallback for Apache hosting (also serves PHP under /api/).
+# Real files (assets, /api/*.php, sitemap.xml, robots.txt) are served as-is.
+# Everything else falls back to /index.html so React Router can handle it.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Don't rewrite real files or directories.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Don't rewrite API endpoints.
+  RewriteRule ^api/ - [L]
+
+  # SPA fallback.
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Sensible caching for static assets.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:css|js|woff2?|ttf|otf|svg|png|jpg|jpeg|webp|avif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(?:html)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

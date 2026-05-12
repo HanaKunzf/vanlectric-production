@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2D4A3E" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#F5EFE0"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top eyebrow -->
+  <text x="80" y="110" font-family="Inter, system-ui, sans-serif" font-size="22"
+        letter-spacing="6" fill="#6B5A3E" font-weight="600">VANLIFE · 12V · OFF-GRID</text>
+
+  <!-- Logo bolt -->
+  <g transform="translate(80,140)">
+    <rect width="84" height="84" rx="14" fill="#2D4A3E"/>
+    <path d="M48 10 L20 48 H36 L30 76 L66 36 H46 L52 10 Z"
+          fill="#F5EFE0" stroke="#F5EFE0" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <text x="190" y="200" font-family="Georgia, serif" font-style="italic"
+        font-size="76" font-weight="700" fill="#2D4A3E">Vanlectric</text>
+
+  <!-- Headline -->
+  <text x="80" y="320" font-family="Georgia, serif" font-size="68" font-weight="700" fill="#1F3329">
+    Vanlife Electrical Calculator
+  </text>
+  <text x="80" y="380" font-family="Inter, system-ui, sans-serif" font-size="30" fill="#4A5C50">
+    Battery · Solar · Charging · Shore Power
+  </text>
+
+  <!-- Pencil sketch van -->
+  <g transform="translate(720,400)" stroke="#2D4A3E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground line -->
+    <path d="M-40 150 L460 150" stroke-dasharray="2 6"/>
+    <!-- van body -->
+    <path d="M20 130 L20 70 Q20 40 50 40 L300 40 Q330 40 340 70 L380 75 Q400 80 400 100 L400 130 Z" fill="#F5EFE0"/>
+    <!-- windows -->
+    <path d="M60 50 L150 50 L150 90 L60 90 Z" fill="#E7DFC8"/>
+    <path d="M170 50 L260 50 L260 90 L170 90 Z" fill="#E7DFC8"/>
+    <!-- door line -->
+    <path d="M210 90 L210 130"/>
+    <!-- wheels -->
+    <circle cx="100" cy="140" r="22" fill="#F5EFE0"/>
+    <circle cx="100" cy="140" r="10"/>
+    <circle cx="320" cy="140" r="22" fill="#F5EFE0"/>
+    <circle cx="320" cy="140" r="10"/>
+    <!-- solar panel on roof -->
+    <path d="M70 30 L290 30 L290 40 L70 40 Z" fill="#2D4A3E" stroke="#1F3329"/>
+    <path d="M110 30 L110 40 M150 30 L150 40 M190 30 L190 40 M230 30 L230 40 M270 30 L270 40" stroke="#F5EFE0"/>
+    <!-- sun -->
+    <circle cx="80" cy="-20" r="18" fill="#F5EFE0"/>
+    <path d="M80 -50 L80 -60 M80 20 L80 30 M50 -20 L40 -20 M110 -20 L120 -20 M58 -42 L52 -48 M102 2 L108 8 M102 -42 L108 -48 M58 2 L52 8"/>
+  </g>
+
+  <!-- Bottom URL -->
+  <text x="80" y="570" font-family="Inter, system-ui, sans-serif" font-size="26"
+        font-weight="600" fill="#2D4A3E">vanlectric.com</text>
+  <text x="1120" y="570" text-anchor="end" font-family="Inter, system-ui, sans-serif"
+        font-size="22" fill="#6B5A3E">Free · No account · Mobile-first</text>
+</svg>
